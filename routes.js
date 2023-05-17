@@ -10,7 +10,7 @@ const handleRequest = (req, res) => {
     res.write('</body></html>')
     return res.end()
   }
-  else if (url.includes('/create-user')) {
+  else if (url === '/create-user') {
     const body = []
     req.on('data', (chunk) => {
       body.push(chunk)
